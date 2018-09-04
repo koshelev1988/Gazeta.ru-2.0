@@ -1,0 +1,31 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.trends-big-post {
+	width: $width;
+	height: $width;
+	max-height: 68rem;
+
+	& .preview-big-post {
+		background: no-repeat center center;
+		background-size: cover;
+		width: $width;
+		height: $width;
+		display: flex;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: $width;
+			height: $width;
+			background-color: #000000;
+			position: absolute;
+			opacity: .3;
+			z-index: 0;
+		}
+
+		@import "trends-big-post-left";
+		@import "trends-big-post-right";
+
+	}
+}

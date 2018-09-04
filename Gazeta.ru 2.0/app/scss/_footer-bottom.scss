@@ -1,0 +1,24 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer-bottom {
+	color: #696969;
+	width: 90%;
+	padding: 2.857142857142857em 0;
+	text-align: center;
+
+	& .logo {
+		font-size: $font-25;
+		font-weight: 400;
+		margin: 0;
+	}
+	a {
+		align-self: center;
+	}
+
+	& img {
+		width: 4.8rem;
+		height: 4.8rem;
+		align-self: center;
+	}
+}

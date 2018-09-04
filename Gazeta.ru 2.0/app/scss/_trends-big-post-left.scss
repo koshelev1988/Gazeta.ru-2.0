@@ -1,0 +1,82 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.big-post-left {
+	//big-post-leftborder: 2px solid #95C181;
+	display: flex;
+	width: 80%;
+	z-index: 1;
+
+	& .block,  & .block a {
+		color: $color-white;
+	}
+	& .block {
+		width: $width;
+		align-self: flex-end;
+
+		& .wrap-top {
+			@include column($flex, $fdc);
+			padding: 0 $font-30;
+
+			& .media {
+				font-size: $font-12;
+				display: flex;
+
+				& .play, & .play .icon, & .indicator, & .time-play {
+					align-self: center;
+				}
+
+				& .play {
+					border: .1rem solid $color-white;
+					-webkit-border-radius: 50%;
+					-moz-border-radius: 50%;
+					border-radius: 50%;
+					display: flex;
+					//width: 1.857142857142857em;
+					//height: 1.857142857142857em;
+					justify-content: center;
+					padding: $font-12;
+
+					& .icon {
+						color: $color-white;
+						font-size: $font-12;
+					}
+				}
+				& .indicator {
+					@include width($width, 20rem);
+					background: #931716;
+					height: .4rem;
+					margin: 0 1.333333333333333em;
+				}
+			}
+			& .title {
+				font-size: 3.142857142857143em;
+				font-weight: 500;
+				line-height: 1.136363636363636em;
+				margin: 1.068181818181818em 0 0.5em 0;
+			}
+			& .social {
+				& .icon {
+					color: $color-grey71;
+					opacity: .5;
+				}
+			}
+		}
+		& .wrap-bottom {
+			display: flex;
+			border-top: .2rem rgba(255, 255, 255, 0.2) solid;
+			width: $width;
+			margin-top: $font-30;
+
+			& .meta {
+				@include width($width, 55rem);
+				font-size: $font-16;
+				padding: 1.75em 0 1.75em 1.875em;
+
+				& .item {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

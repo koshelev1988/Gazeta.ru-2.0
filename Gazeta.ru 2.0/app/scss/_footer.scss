@@ -1,0 +1,24 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer {
+	align-items: $center;
+	width: $width;
+	
+	& > *{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	background: $color-black;
+	color: $color-white;
+	//height: 55rem;
+	@import "footer-menu";
+	@import "footer-logo";
+	@import "footer-bottom";
+
+	& a {
+		color: $color-white;
+	}
+}

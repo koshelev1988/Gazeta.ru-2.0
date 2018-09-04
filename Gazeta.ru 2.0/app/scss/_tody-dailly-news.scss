@@ -1,0 +1,67 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.daily-news {
+	width: $width;
+
+	& p.title {
+		font-size: $font-16;
+		margin: 0;
+		//line-height: 1.375em;
+		//letter-spacing: 0.025em;
+	}
+	& .news-hour,
+	& .news-hour > h4,
+	& .news-hour a p,
+	& .news-hour a {
+		color: $color-white;
+		font-weight: 400;
+	}
+	& .news-hour {
+		width: $width;
+		min-height: 19.5rem;
+		max-height: 100%;
+
+		& .wrap {
+			@include flex-column-center($flex, $fdc, $center);
+			width: $width;
+			height: $width;
+			padding: 0 $font-30;
+
+			& .preview {
+				@include width($width, 22rem);
+				text-align: center;
+			}
+			& .indicators {
+				@include width($width, 19rem);
+				display: flex;
+
+				& .indicator {
+					@include width($width, 3.2rem);
+					background: #a29999;
+					display: flex;
+					height: .3rem;
+					margin: 2.142857142857143em 0.142857142857143em;
+
+					&.active {
+						background: $color-white;
+					}
+				}
+			}
+		}
+	}
+	& .daily-news-block {
+		width: 100%;
+		padding: 0 2.214285714285714em;
+
+		& > .preview {
+			@include column($flex, $fdc);
+			@include width($width, 27rem);
+			margin: 1.2142857142857141em 0;
+		}
+	}
+	& .btn {
+		align-self: center;
+		margin: 3.571428571428571em 0 3.571428571428571em 0;
+	}
+}

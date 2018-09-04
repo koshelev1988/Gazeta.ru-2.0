@@ -1,0 +1,10 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.container {
+	@include width($width, 133rem);
+	margin-left: 8rem;
+	@import "header";
+	@import "content";
+	@import "footer";
+}

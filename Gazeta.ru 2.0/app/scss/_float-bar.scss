@@ -1,0 +1,62 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.float-bar {
+	@include width($width, 8rem);
+	background-color: $color-ruby-red;
+	-webkit-border-radius: .8rem 0 0 .8rem;
+	-moz-border-radius: .8rem 0 0 .8rem;
+	border-radius: .8rem 0 0 .8rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 95vh;
+	max-height: 108rem;
+	align-items: center;
+	padding: $font-34 $font-12 $font-36 $font-12;
+	//position: relative;
+	position: fixed;
+	text-align: center;
+	z-index: 42;
+
+	& .media-mobil {
+		display: none;
+	}
+	
+
+	& .icon {
+		color: $color-white;
+		font-size: $font-20;
+		padding-bottom: 1em;
+	}
+	& .media {
+		align-self: center;
+		@import "float-bar-search";
+	}
+	& .menu-touch {
+		display: none;
+
+		& .icon {
+			font-size: $font-25;
+			font-weight: 500;
+			cursor: pointer;
+		}
+	}
+	.search-group {
+		z-index: 0;
+
+		& .icon {
+			font-size: $font-25;
+			font-weight: 500;
+			padding: 0;
+		}
+		& .btn-touch {
+			background: $color-ruby-red;
+			cursor: pointer;
+
+			&:focus {
+				color: #000;
+			}
+		}
+	}
+}

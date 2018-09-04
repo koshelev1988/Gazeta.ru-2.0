@@ -1,0 +1,16 @@
+@import "partials/params";
+@import "partials/mixins";
+
+
+.footer-menu {
+	//border: 2px solid #fff200;
+	font-size: $font-16;
+	width: 95%;
+	padding: $font-34 0;
+
+	& .menu-ul {
+		& .menu-li {
+			margin-right:  $font-30;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.menu-bar {
+	@include width($width, 27rem);
+	background-color: $color-smoky-white;
+	-webkit-border-radius: 0 .8rem .8rem 0;
+	-moz-border-radius: 0 .8rem .8rem 0;
+	border-radius: 0 .8rem .8rem 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: $font-16;
+	height: 55vh;
+	min-height: 28rem;
+	max-height: 56rem;
+	padding: 2.125em 1.875em;
+
+	& .menu-ul {
+		flex-direction: column;
+	}
+}

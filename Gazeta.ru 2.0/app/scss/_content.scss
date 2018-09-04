@@ -1,0 +1,12 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.content {
+	width: $width;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	@import "today";
+	@import "trends";
+	@import "masonry";
+}

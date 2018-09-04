@@ -1,0 +1,57 @@
+@import "partials/params";
+@import "partials/mixins";
+
+
+.post-main	{
+	@include width($width, $max-width);
+
+	& .preview {
+		@include flex($flex, $center);
+		background: no-repeat center center;
+		background-size: cover;
+		width: $width;
+		min-height: 23.3rem;
+		max-height: $width;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: $width;
+			height: $width;
+			max-height: $width;
+			background-color: #000000;
+			position: absolute;
+			opacity: .3;
+			z-index: 0;
+		}
+		& .meta {
+			width: $width;
+			align-self: flex-end;
+			color: $color-white;
+			font-weight: 400;
+			text-align: center;
+			padding: 0 $font-30;
+			z-index: 1;
+
+			& h4 {
+				font-size: $font-18;
+
+			}
+			& a {
+				color: $color-white;
+			}
+		}
+	}
+	& .item-main-ul {
+		flex-direction: column;
+
+		& .item-main-li {
+			@include width($width, 20rem);
+			padding: $font-16 $font-30;
+
+			& .item {
+				margin: 0;
+			}
+		}
+	}
+}

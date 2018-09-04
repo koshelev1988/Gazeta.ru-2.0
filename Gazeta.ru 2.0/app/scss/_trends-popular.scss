@@ -1,0 +1,46 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.popular {
+	width: $width;
+	padding: $font-30;
+
+	& h4 {
+		font-size: 1.714285714285714em;
+		font-weight: 500;
+		line-height: 1.25em;
+		margin: 0 0 0.416666666666667em 0;
+	}
+	& .preview {
+		margin-top: 2.857142857142857em;
+
+		& .wrap-top {
+			margin-bottom: $font-25;
+
+			& .title {
+				font-size: $font-20;
+				font-weight: 500;
+				line-height: 1.5em;
+				margin: 0;
+			}
+		}
+		& .wrap-bottom {
+			& .meta {
+				& .item {
+					font-size: $font-16;
+					margin: 0;
+
+				}
+			}
+			& .views {
+				display: flex;
+
+				& .eyeglasses {
+					margin-right: 0.714285714285714em;
+				}
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,94 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.header-logo {
+	//border: 2px solid #0400ff;
+	width: $width;
+	height: 90%;
+
+	& .header-post {
+		align-self: center;
+		width: $width;
+		height: 8.4rem;
+
+		& .preview {
+			display: flex;
+			width: $width;
+			height: $width;
+
+			& .wrap {
+				&:hover {
+					&::after {
+						content: '';
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						border-radius: 50%;
+						width: $width;
+						height: $width;
+						background-color: #000000;
+						position: absolute;
+						opacity: .5;
+						z-index: 0;
+					}
+				}
+				& .icon {
+					color: $color-white;
+					font-size: $font-34;
+					position: absolute;
+					align-self: center;
+					-webkit-transition: opacity .5s;
+					-moz-transition: opacity .5s;
+					-ms-transition: opacity .5s;
+					-o-transition: opacity .5s;
+					transition: opacity .5s;
+					opacity: 0;
+					z-index: 1;
+					display: block;
+
+					&:hover{
+						display: block;
+						-webkit-transition: opacity .5s;
+						-moz-transition: opacity .5s;
+						-ms-transition: opacity .5s;
+						-o-transition: opacity .5s;
+						transition: opacity .5s;
+						opacity: 1;
+					}
+				}
+			}
+			&-2 {
+				justify-content: flex-end;
+			}
+			& .preview-wrap {
+				@include width($width, 23.9rem);
+				@include column($flex, $fdc);
+				align-self: $center;
+				margin-left: $font-20;
+
+				& .meta {
+					font-size: $font-16;
+
+					& .title {
+						font-size: $font-16;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	& .logo {
+		//border: 2px solid #0961ff;
+		@include width($width, 39rem);
+		align-items: center;
+		padding-top: $font-60;
+
+		& .title-logo {
+			font-size: $font-70;
+			font-weight: 400;
+			letter-spacing: 0.025714285714286em;
+		}
+		& .weather {
+			@include flex-column-center($flex, $fdc, $aic);
+		}
+	}
+}

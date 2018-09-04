@@ -1,0 +1,138 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.divider {
+	display: flex;
+
+	& .justify-content {
+		&.between {
+			justify-content: space-between;
+		}
+		&.center {
+			justify-content: $center;
+		}
+		&.start {
+			justify-content: start;
+		}
+		&.around {
+			justify-content: space-around;
+		}
+	}
+	&.transference {
+		flex-wrap: nowrap;
+
+		@media only screen and (max-width: 1100px) {
+			&-col-lg {
+				flex-wrap: wrap;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			&-col-sm {
+				flex-wrap: wrap;
+			}
+		}
+	}
+	&.horizontal {
+		flex-direction: row;
+
+		@media only screen and (max-width: 768px) {
+			&-col-sm {
+				flex-direction: row;
+			}
+		}
+	}
+	&.vertical {
+		flex-direction: column;
+
+		@media only screen and (max-width: 1100px) {
+			&-col-lg {
+				flex-direction: column;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			&-col-sm {
+				flex-direction: column;
+			}
+		}
+		@media only screen and (max-width: 540px) {
+			&-col-xs {
+				flex-direction: column;
+			}
+		}
+	}
+	&.vertical,
+	&.vertical-col-lg,
+	&.vertical-col-sm,
+	&.vertical-col-xs,
+	&.horizontal,
+	&.horizontal-col-sm {
+
+	}
+	& > .divided {
+		//border: 1px dotted #000000;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		flex: 1 1 auto;
+
+
+		&.one-quoter {
+			flex: 0 0 25%;
+		}
+		&.three-quarters {
+			flex: 0 0 75%;
+		}
+		&.two-quarters {
+			flex: 0 0 50%;
+			@media only screen and (max-width: 768px) {
+				&-col-sm {
+					flex: 0 0 50%;
+				}
+			}
+		}
+		&.half {
+			flex: 0 0 30%;
+		}
+		&.one-third {
+			flex: 0 0 33.333333333%;
+			@media only screen and (max-width: 768px) {
+				&-col-sm {
+					flex: 0 0 33.333333333%;
+				}
+			}
+		}
+		&.two-thirds {
+			flex: 0 0 66.66666666%;
+			@media only screen and (max-width: 768px) {
+				&-col-sm {
+					flex: 0 0 66.66666%;
+				}
+			}
+		}
+		&.one-whole {
+			flex: 0 0 100%;
+			@media only screen and (max-width: 768px) {
+				&-col-sm {
+					flex: 0 0 100%;
+				}
+			}
+		}
+
+		&.two-quarters {
+			@media only screen and (max-width: 768px) {
+				&-col-sm {
+					flex: 0 0 50%;
+				}
+			}
+		}
+		&.portion {
+			flex: 0 0 36%;
+		}
+		&.portion-big {
+			flex: 0 0 64%;
+		}
+	}
+}
+.fixed {
+	position: fixed;
+}

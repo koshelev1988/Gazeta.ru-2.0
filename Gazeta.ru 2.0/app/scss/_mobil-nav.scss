@@ -1,0 +1,12 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.mobil-nav {
+	@include width($width, 76.8rem);
+	background: $color-smoky-white;
+	position: absolute;
+
+	& .menu-ul {
+		flex-wrap:wrap ;
+	}
+}

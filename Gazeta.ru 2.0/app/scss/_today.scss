@@ -1,0 +1,18 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.today {
+	width: $width;
+	//border: 2px solid #981217;
+
+
+	& h4 {
+		font-size: $font-18;
+		letter-spacing: 0.027777777777778em;
+		margin-bottom: 1.111111111111111em;
+	}
+	@import "tody-dailly-news";
+	@import "today-big-post";
+	@import "today-post-main";
+	@import "tody-post";
+}

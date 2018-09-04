@@ -1,0 +1,142 @@
+@import "partials/params";
+@import "partials/mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+
+
+
+html {
+	font-size: 10px;
+}
+
+body {
+	@include flex($flex, $center);
+	background: #f1f1f1;
+	color: $color-black;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.57142857143em;
+	margin: 0;
+	min-width: 34rem;
+}
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	color: $color-black;
+	text-decoration: none;
+}
+
+img {
+	max-width: $width;
+}
+
+ul {
+	//@include flex($flex, $jcb);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.icon {
+	color: $color-grey71;
+}
+
+.times {
+	font-size: 0.857142857142857em;
+
+	& .icon {
+		font-size: 1.166666666666667em;
+		margin: 0 0.357142857142857em;
+	}
+}
+
+.publication-date {
+	@include width($width, 20rem);
+	font-size: 0.857142857142857em;
+
+	& .icon {
+		font-size: 1.166666666666667em;
+		margin: 0 0.357142857142857em;
+	}
+}
+
+.author{
+	font-size: 0.857142857142857em;
+
+	& .icon {
+		font-size: 1.166666666666667em;
+		margin: 0 0.357142857142857em;
+	}
+}
+
+.comment{
+	margin:0 $font-16;
+
+	& .icon {
+		margin-right: 0.714285714285714em;
+	}
+}
+
+
+.preview {
+	& .wrap {
+		border: .1rem solid $color-white;
+		display: flex;
+		width: 8rem;
+		height: 8rem;
+		justify-content: $center;
+		position: relative;
+
+		& img {
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+		}
+
+		& .icon {
+			align-self: $center;
+			color: $color-white;
+			font-size: $font-30;
+			position: absolute;
+
+		}
+	}
+}
+.post {
+	border: .1rem solid #dcdcdc;
+	width: $width;
+
+	& .block{
+		@include column($flex, $fdc);
+		width: $width;
+		padding: $font-30;
+
+		& .wrap {
+			width: $width;
+
+			& .title {
+				font-size: $font-18;
+				margin: 1.222222222222222em 0 0 0;
+			}
+			& .item {
+				margin: $font-18 0 0 0;
+			}
+		}
+	}
+}
+@import "mobil-nav";
+.app {
+	@include width($width, 168rem);
+	//@include flex($flex, $jcb);
+	@import "mobil-menu";
+	@import "float-bar";
+	@import "container";
+	@import "menu-bar";
+
+}

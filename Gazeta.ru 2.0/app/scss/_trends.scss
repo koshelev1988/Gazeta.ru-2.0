@@ -1,0 +1,8 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.trends {
+	width: $width;
+	@import "trends-big-post";
+	@import "trends-popular";
+}

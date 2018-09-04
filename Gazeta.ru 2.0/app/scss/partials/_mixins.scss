@@ -1,0 +1,29 @@
+@import "params";
+
+@mixin flex($flex, $jcb) {
+	display: $flex;
+	justify-content: $jcb;
+}
+
+@mixin flex-column($flex, $fdc, $jcb) {
+	display: $flex;
+	flex-direction: $fdc;
+	justify-content: $jcb;
+}
+
+@mixin flex-column-center($flex, $fdc, $center) {
+	display: $flex;
+	flex-direction: $fdc;
+	align-items: $center;
+}
+
+@mixin column($flex, $fdc) {
+	display: $flex;
+	flex-direction: $fdc;
+}
+
+@mixin width($width, $max-width) {
+	width: $width;
+	max-width: $max-width;
+}
+
